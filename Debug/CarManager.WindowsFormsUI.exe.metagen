@@ -1,0 +1,77 @@
+  CarManagerWindowsFormsUI.CreateCarForm.resources - Embedded, ContainedInManifestFile, 
+  CarManagerWindowsFormsUI.EditCarForm.resources - Embedded, ContainedInManifestFile, 
+  CarManagerWindowsFormsUI.MainForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly CarManager.WindowsFormsUI, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly CarManager.Logic, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class CarManagerWindowsFormsUI.OrderProviders.ByModelCarComparer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.Collections.Generic.IComparer`1[CarManager.Logic.Car]
+  Methods:
+    Compare(Car, Car): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface CarManagerWindowsFormsUI.Filters.ICarFilter: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    IsEnable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Filter(Car[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class CarManagerWindowsFormsUI.Filters.ByModelFilter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Windows.Forms.CheckBox, System.Windows.Forms.TextBox): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    CarManagerWindowsFormsUI.Filters.ICarFilter
+  Methods:
+    IsEnable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Filter(Car[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface CarManagerWindowsFormsUI.Formaters.ITextFormater: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    Format(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class CarManagerWindowsFormsUI.Formaters.CamelCaseTextFormatter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    CarManagerWindowsFormsUI.Formaters.ITextFormater
+  Methods:
+    Format(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Interface CarManagerWindowsFormsUI.OrderProviders.IOrderProvider: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Methods:
+    IsEnable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    ReOrder(Car[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class CarManagerWindowsFormsUI.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class CarManagerWindowsFormsUI.CreateCarForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(CarManager.Logic.CarService): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class CarManagerWindowsFormsUI.EditCarForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(CarManager.Logic.CarService, CarManager.Logic.Car): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class CarManagerWindowsFormsUI.Filters.HaveNoInspectionThisYear: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Windows.Forms.CheckBox): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    CarManagerWindowsFormsUI.Filters.ICarFilter
+  Methods:
+    IsEnable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Filter(Car[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class CarManagerWindowsFormsUI.OrderProviders.SortByModelOrderProvider: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.Windows.Forms.CheckBox): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    CarManagerWindowsFormsUI.OrderProviders.IOrderProvider
+  Methods:
+    IsEnable(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    ReOrder(Car[]): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class CarManagerWindowsFormsUI.OrderProviders.QuicSorter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Sort(Car[], IComparer`1): PrivateScope, Public, Static, HideBySig

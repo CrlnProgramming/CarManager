@@ -1,0 +1,65 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly CarManager.Logic, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class CarManager.Logic.CarNumber: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetRegionCode(): PrivateScope, Public, HideBySig
+    SetRegionCode(String): PrivateScope, Public, HideBySig
+    GetDigitalCode(): PrivateScope, Public, HideBySig
+    SetDigitalCode(String): PrivateScope, Public, HideBySig
+    GetLiteralCode(): PrivateScope, Public, HideBySig
+    SetLiteralCode(String): PrivateScope, Public, HideBySig
+    GetFullCarNumber(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class CarManager.Logic.Person: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetFirstName(): PrivateScope, Public, HideBySig
+    SetFirstName(String): PrivateScope, Public, HideBySig
+    GetSurName(): PrivateScope, Public, HideBySig
+    SetSurName(String): PrivateScope, Public, HideBySig
+    GetFullName(): PrivateScope, Public, HideBySig
+    GetAddress(): PrivateScope, Public, HideBySig
+    SetAddress(String): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class CarManager.Logic.Car: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, CarManager.Logic.CarNumber, System.String, CarManager.Logic.Person, System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime LastInspectionDate 'get set' : 
+    CarManager.Logic.Person Owner 'get set' : 
+    System.String Color 'get set' : 
+    CarManager.Logic.CarNumber Number 'get set' : 
+    System.String Model 'get set' : 
+  Methods:
+    get_Model(): PrivateScope, Public, HideBySig, SpecialName
+    set_Model(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Number(): PrivateScope, Public, HideBySig, SpecialName
+    set_Number(CarNumber): PrivateScope, Public, HideBySig, SpecialName
+    get_Color(): PrivateScope, Public, HideBySig, SpecialName
+    set_Color(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Owner(): PrivateScope, Public, HideBySig, SpecialName
+    set_Owner(Person): PrivateScope, Public, HideBySig, SpecialName
+    get_LastInspectionDate(): PrivateScope, Public, HideBySig, SpecialName
+    set_LastInspectionDate(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class CarManager.Logic.CarService: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Events:
+    System.EventHandler Update: SpecialName
+  Methods:
+    add_Update(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_Update(EventHandler): PrivateScope, Public, HideBySig, SpecialName
+    AddCar(Car): PrivateScope, Public, HideBySig
+    RemoveCar(Car): PrivateScope, Public, HideBySig
+    GetCars(): PrivateScope, Public, HideBySig

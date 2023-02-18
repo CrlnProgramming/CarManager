@@ -1,0 +1,4 @@
+﻿  MainForm.cpp
+e:\studwork\c++\carmanager\carmanager.windowsformsui\mainform.cpp(105): warning C4068: unknown pragma
+  ByModelCarComparer.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  CarManager.WindowsFormsUI.vcxproj -> E:\studwork\C++\CarManager\Debug\CarManager.WindowsFormsUI.exe
